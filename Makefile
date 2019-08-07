@@ -1,4 +1,6 @@
+export FLASKAPP=flaskapp.py
+export FLASK_DEBUG=1
+export FLASK_ENV=development
+
 gina:
-	FLASKAPP=flaskapp.py
-	FLASK_DEBUG=1	
 	flask run
