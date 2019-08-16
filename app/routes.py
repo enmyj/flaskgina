@@ -1,5 +1,5 @@
 import random
-from flask import render_template
+from flask import render_template, request
 from app import app
 
 @app.route('/')
@@ -11,11 +11,14 @@ def index():
         "Try not to talk too much in the morning",
         "Walk softly and be sure to hit goal steps",
         "Don't fart in your sleeping bag",
-        "Toenails are for quitters",
-        "Those pickles can't hurt you",
-        "Center your microbiome and emit visible light"
+        "Toenails are for quitters"
     ]
 
+    # if request.method == 'POST':
+    #     if 'advice' in request.form:
+    #         return render_template('index.html', advice=random.choice(advice))
+    # elif request.method == 'GET':
+        
     return render_template('index.html', advice=random.choice(advice))
 
 

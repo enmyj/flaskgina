@@ -1,13 +1,16 @@
-<head>
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-
+<!doctype html>
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, I'm <a href="{{ url_for('gina') }}">Gina</a>!!</h1>
-    <p>Welcome to Gina!</p>
-    <p>Here's my advice for you today: <i>{{ advice }}</i></p>
-    <div><p>Don't forget to check me out on <a href=https://www.instagram.com/ginarogari>Instagram</a></p></div>
+<main role="main">
 
+    <div class='jumbotron'>
+        <div class="container">
+            <h1 class="display-3">Hi, I'm Gina!</h1>
+            <p>Welcome to Gina!</p>
+            <p>Here's my advice for you today: <i>{{ advice }}</i></p>
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name='advice'>More Advice</button> -->
+        </div>
+    </div>
+</main>
 {% endblock %}
